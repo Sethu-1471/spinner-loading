@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinners</title>
+    <style>
+        body{
+            height: 100vh;
+  background: black;
+  overflow-y: hidden;
+        }
+        .container{
+            display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+        }
+        .loading{
+            display: inline-block;
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            margin: 20px;
+        }
+        .loading-spin{
+            border: solid 0.5rem;
+            border-color: #ff78aa #ffffff16 #ffffff16;
+            animation: spin 1s infinite linear;
+        }
+        .loading-ease-spin{
+            border: solid 0.5rem;
+            border-color: #25d9e6 #ffffff16;
+            animation: spin 1.2s infinite ease-in-out;
+        }
+        .loading-dot-spin{
+            border: dotted 0.5rem;
+            border-color: #ff78aa #ffffff16 #ffffff16;
+            animation: spin 1.2s infinite linear;
+        }
+        .loading-double-spin{
+            border: double 0.5rem;
+            border-color: #ff78aa #ffffff16 #ffffff16;
+            animation: spin 1.2s infinite linear;
+        }
+        .loading-hack-spin{
+            background: conic-gradient(#7abd3300, #7abd33);
+            animation: spin 1.2s infinite linear;
+        }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        h2{
+            font-size: 3rem;
+  text-align: center;
+  margin: 3rem 0 1rem;
+  font-weight: 700;
+  color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Spinner loading</h2>
+    <div class="container">
+    <div class="loading loading-spin"></div>
+    <div class="loading loading-ease-spin"></div>
+    <div class="loading loading-dot-spin"></div>
+    <div class="loading loading-double-spin"></div>
+    <div class="loading loading-hack-spin"></div>
+    </div>
+</body>
+</html>
